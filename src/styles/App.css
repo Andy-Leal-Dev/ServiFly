@@ -1,0 +1,170 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.navGlobal{
+  background-color: #000000;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+
+.login-left, .login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+
+.login-left {
+  flex-direction: column;
+  text-align: left;
+  padding: 50px;
+}
+
+
+.login-left h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1.4;
+  color: #00626b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5rem;
+}
+
+
+.login-box {
+  width: 100%;
+  max-width: 550px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Nuevo contenedor que alinea logo + formulario en una fila */
+.login-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Estilo del logo dentro del formulario */
+.form-logo {
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  flex: 1;
+  text-align: center;
+}
+
+
+.login-box h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+
+form p {
+  width: 100%;
+  margin-bottom: 0rem;
+}
+
+
+form input {
+  width: 70%;
+  padding: 12px;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #00838f;
+}
+
+form button {
+  width: 50%;
+  padding: 12px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00838f;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+form button:hover {
+  background-color: #00626b;
+}
+
+form hr {
+  width: 70%;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #000000;
+}
+
+.google {
+  background-color: #ffffffd0;
+  margin-top: 0.5rem;
+  color: #000000; /* Aquí defines el color del texto */
+  font-weight: bold; /* Opcional: para que se vea más visible */
+  border: solid 1px #000000;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.google:hover {
+  background-color: #ece8e8;
+}
+
+.facebook {
+  background-color: #ffffffd0;
+  margin-top: 0.5rem;
+  color: #000000; /* Aquí defines el color del texto */
+  font-weight: bold; /* Opcional: para que se vea más visible */
+  border: solid 1px #000000;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.facebook:hover {
+  background-color: #ece8e8;
+}
+
+.links {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.links a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+a strong {
+  color: #00838f;
+}
