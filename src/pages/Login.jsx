@@ -1,46 +1,110 @@
+import { useState } from 'react';
 import logo from '../assets/img/logo.png';
 import logogoogle from '../assets/img/logogoogle.png';
 import logofacebook from '../assets/img/logofacebook.png';
 import Icon from '../assets/img/Icon.png';
 import '../styles/login.css';
-function App() {
+
+function Login() {
+  const [isRegistering, setIsRegistering] = useState(false);
+
   return (
     <>
       <div className="login-container">
+        {/* Panel izquierdo fijo */}
         <div className="login-left">
-          <img src={logo} alt="ServiFly Logo" style={{ width: '300px', marginBottom: '-1rem', marginRight: '25rem', marginTop: '-10rem' }} />
+          <img
+            src={logo}
+            alt="ServiFly Logo"
+            style={{
+              width: '300px',
+              marginBottom: '-1rem',
+              marginRight: '25rem',
+              marginTop: '-10rem'
+            }}
+          />
           <h1 style={{ marginTop: '5rem', marginBottom: '2rem' }}>
             Conecta con los expertos <br />
             más demandados en <br />
             el mundo para <strong style={{ color: '#0F1C2F' }}>resolver <br />
-            tus problemas.</strong>
+              tus problemas.</strong>
           </h1>
         </div>
 
-        <div style={{ marginTop: '3rem', marginRight: '2rem', marginBottom: '2rem' }} className="login-right">
-          <div className="login-box">
-            <img src={Icon} alt="ServiFly Logo" style={{ width: '80px', marginBottom: '-1rem', marginRight: '1.5rem', marginTop: '-0.5rem' }} />
-            <h2 style={{ marginTop: '0.5rem' }}>¡Bienvenido de <br /> vuelta!</h2>
+        {/* Panel derecho con formulario */}
+        <div className="login-right">
+          <div className={`login-box ${isRegistering ? 'slide-in' : ''}`}>
+            <img
+              src={Icon}
+              alt="ServiFly Logo"
+              style={{ width: '80px', marginBottom: '-1rem', marginRight: '1.5rem', marginTop: '-0.5rem' }}
+            />
+            <h2 style={{ marginTop: '0.5rem' }}>
+              {isRegistering ? '¡Crea tu cuenta!' : '¡Bienvenido de vuelta!'}
+            </h2>
+
             <form>
-              <div style={{ marginTop: '-0.5rem' }} className="form">
-                <p style={{ marginRight: '1rem' }}><strong>Email o nombre de usuario</strong></p>
-                <input type="text" placeholder="Email o nombre de usuario" />
-                <p className='Indicaciones'><strong>Contraseña</strong></p>
-                <input type="password" placeholder="Contraseña" />
-                <button style={{ marginTop: '0.5rem' }} type="submit">Iniciar Sesión</button>
-                <hr style={{ marginTop: '-0.5rem' }} />
-                <button style={{ marginTop: '-0.5rem' }} className="google">
-                  <img src={logogoogle} alt="Google Logo" style={{ width: '20px', textAlign: 'left', marginRight: '10px' }} />
-                  Continuar con Google
-                </button>
-                <button style={{ marginTop: '-0.5rem' }} className="facebook">
-                  <img src={logofacebook} alt="Facebook Logo" style={{ width: '20px', marginRight: '10px' }} />
-                  Continuar con Facebook
-                </button>
-                <div style={{ marginTop: '-0.5rem' }} className="links">
-                  <a style={{ marginTop: '-0.5rem' }} href="#">¿Has olvidado tu contraseña?</a><br />
-                  <a href="#">¿No tienes una cuenta? <strong>Regístrate</strong></a>
-                </div>
+              <div className="form">
+                {isRegistering ? (
+                  <>
+                    <label htmlFor="nombres">Nombres</label>
+                    <input type="text" id="nombres" placeholder="Nombres" />
+
+                    <label htmlFor="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" placeholder="Apellidos" />
+
+                    <label htmlFor="cedula">Cédula</label>
+                    <input type="text" id="cedula" placeholder="Cédula" />
+
+                    <label htmlFor="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="Correo electrónico" />
+
+                    <label htmlFor="telefono">Teléfono</label>
+                    <input type="text" id="telefono" placeholder="Teléfono" />
+
+                    <label htmlFor="direccion">Dirección</label>
+                    <input type="text" id="direccion" placeholder="Dirección" />
+
+                    <label htmlFor="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" />
+
+                    <div className="form-checkbox">
+                      <input type="checkbox" id="terms" />
+                      <label htmlFor="terms">Acepto los términos y servicios</label>
+                    </div>
+
+                    <button type="submit">Registrarse</button>
+                    <div className="links">
+                      <a href="#" onClick={() => setIsRegistering(false)}>¿Ya tienes una cuenta? <strong>Inicia sesión</strong></a>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <label htmlFor="login">Email o nombre de usuario</label>
+                    <input type="text" id="login" placeholder="Email o nombre de usuario" />
+
+                    <label htmlFor="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="Contraseña" />
+
+                    <button type="submit">Iniciar sesión</button>
+                    <hr />
+
+                    <button className="google">
+                      <img src={logogoogle} alt="Google Logo" />
+                      Continuar con Google
+                    </button>
+
+                    <button className="facebook">
+                      <img src={logofacebook} alt="Facebook Logo" />
+                      Continuar con Facebook
+                    </button>
+
+                    <div className="links">
+                      <a href="#">¿Has olvidado tu contraseña?</a><br />
+                      <a href="#" onClick={() => setIsRegistering(true)}>¿No tienes una cuenta? <strong>Regístrate</strong></a>
+                    </div>
+                  </>
+                )}
               </div>
             </form>
           </div>
@@ -61,4 +125,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;

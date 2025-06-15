@@ -1,3 +1,16 @@
+V 0.0.2.0 (
+    -Se Agrego la carpeta utils
+    -Se hicieorn modificaciones del css en App
+    -Modificaciones de css en la Nav
+    -Modificaciones de css en el Login
+    -Modificaciones estructurales del Login
+    -Se implemento un formulario de registro en la misma vista del Login
+
+
+)
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

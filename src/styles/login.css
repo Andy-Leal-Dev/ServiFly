@@ -10,6 +10,8 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: row;
+  overflow: hidden;
+  background-color: #f2f2f2;
 }
 
 .login-left,
@@ -25,6 +27,12 @@ body {
   flex-direction: column;
   text-align: left;
   padding: 50px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+  background-color: #f2f2f2;
+  z-index: 2;
 }
 
 .login-left h1 {
@@ -39,12 +47,16 @@ body {
 .login-box {
   width: 100%;
   max-width: 700px;
-  height: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
   padding: 2rem;
   text-align: center;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
 }
 
 .login-box h2 {
@@ -54,26 +66,54 @@ body {
   color: #0F1C2F;
 }
 
-form p {
+form {
   width: 100%;
-  margin-bottom: 0rem;
 }
 
-form input {
+form label {
+  display: block;
+  text-align: left;
+  padding-left: 5%;
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 600;
+  color: #01403A;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
   width: 90%;
   padding: 12px;
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
-  box-shadow: 0 2px 5px #00838f;
+  box-shadow: 0 2px 5px #00838f1a;
   box-sizing: border-box;
 }
 
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem 0 0.5rem;
+  padding-left: 5%;
+  font-size: 0.95rem;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
 form button {
-  width: 50%;
+  width: 60%;
   padding: 12px;
-  margin-top: 1rem;
+  margin: 1rem 0;
   border: none;
   border-radius: 8px;
   background-color: #01403A;
@@ -81,7 +121,6 @@ form button {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 1rem;
 }
 
 form button:hover {
@@ -90,21 +129,31 @@ form button:hover {
 
 form hr {
   width: 70%;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   border: none;
   border-top: 1px solid #000000;
 }
 
 .google,
 .facebook {
-    width: 80%;
+  width: 80%;
   background-color: #ffffffd0;
-  margin-top: 0.5rem;
   color: #000000;
   font-weight: bold;
   border: solid 1px #000000;
   border-radius: 20px;
   font-size: 15px;
+  margin: 0.5rem auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google img,
+.facebook img {
+  margin-right: 10px;
+  width: 20px;
 }
 
 .google:hover,
@@ -128,6 +177,21 @@ form hr {
 
 a strong {
   color: #01403A;
+}
+
+.slide-in {
+  animation: slideFade 0.5s ease forwards;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===================== RESPONSIVE ===================== */
