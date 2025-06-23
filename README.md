@@ -1,3 +1,19 @@
+V 0.1.3.1 (
+
+    -Se agrego la carpeta components
+
+    -Se agregaron los componenentes, footer, institucional, y whoAre
+
+    -Se agrego la vista de Condiciones con su respectiva ruta
+
+    -Se construyo el footer con las respectiva redes
+
+    -Se modificaron inputs en el registro, se elimino el input cedula y se agrego el de contraseña y repetir
+    contraseña
+
+    -Algunos cambios minimos de css en Index.css, se agrego un color white en el fondo general
+)
+
 V 0.0.2.0 (
 
     - Se Agrego la carpeta utils

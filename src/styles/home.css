@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Reset general para evitar espacios blancos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Contenedor principal del carrusel */
+.home-carousel {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.home-section {            
+  display: flex;             
+  justify-content: center;   
+  align-items: center;       
+  padding: 20px;             
+  background-color: #fff;    
+}
+
+/* Contenedor de slides */
+.slider-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Carrusel de slides en fila */
+.slides {
+  display: flex;
+  height: 10%;
+  width: 100%; /* Ajustar según número de slides */
+  transition: transform 1s ease-in-out;
+}
+
+/* Slide individual */
+.slide {
+  flex: 0 0 100%;
+  height: 100vh; /* usa 100vh en lugar de 100% */
+  background-size: cover; /* mantiene escala pero puede recortar */
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+/* Overlay oscuro encima de cada slide */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 650px;
+  font-size: 3vw;
+  font-weight: 900;
+  max-width: 800px;
+  line-height: 1.3;
+}
+
+/* Dots del carrusel */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.dots span.active {
+  opacity: 1;
+}
+
+/* Navbar sobre el fondo */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  z-index: 2;
+  
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+/* Icono de búsqueda */
+.Busquedaimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+}
+
+.busqueda-icono {
+  width: 25px;
+  height: 25px;
+}
+
+/* Barra de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  flex: 1;
+  width: 450px;
+  margin: 0 10px;
+  margin-right: 160px;
+  padding: 8px 12px;
+  border-radius: 40px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+.menu .login {
+  background-color: #085454;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+/* Sección de servicios */
+.servicios {
+  padding: 60px 40px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+/* Título + enlace */
+.titulo-servicios {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+}
+
+.explorar-link {
+  font-size: 1rem;
+  color: #085454;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Tarjetas */
+.cards-servicios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card-servicio {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-servicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.card-servicio:hover img {
+  transform: scale(1.1);
+}
+
+.card-servicio .info {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  width: 100%;
+  text-align: left;
+}
+
+.card-servicio h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-servicio p {
+  font-size: 0.9rem;
+}
+
+/* Texto final */
+.ofrecemos-todo {
+  margin-top: 60px;
+}
+
+.ofrecemos-todo h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #004d4d;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.ofrecemos-todo p {
+  color: #252525;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.beneficios {
+  padding: 60px 40px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.beneficios-top {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circulo {
+  width: 60px;
+  height: 60px;
+  background-color: #004d4d;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.beneficio p {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.beneficios-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.beneficios-main img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.texto-beneficio h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.texto-beneficio p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 500px;
+}
+
+.beneficios-top {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.beneficio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circulo {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.circulo img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.institucional {
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.titulo-institucional {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #004d4d;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bloques-horizontales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card-institucional {
+  background-color: white;
+  border-radius: 16px;
+  padding: 30px;
+  width: 250px;
+  height: 150px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-institucional:hover {
+  transform: scale(1.05);
+  background-color: #e6f2f2;
+}
+
+.card-institucional h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #004d4d;
+}
+
+/* Modal */
+.modal-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 16px;
+  position: relative;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-contenido h3 {
+  color: #004d4d;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.modal-contenido ul {
+  padding-left: 20px;
+}
+
+.modal-contenido li {
+  margin-bottom: 10px;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-contenido {
+  animation: modalFadeIn 0.3s ease forwards;
+}

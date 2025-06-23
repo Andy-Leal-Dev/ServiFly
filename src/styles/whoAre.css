@@ -1,0 +1,123 @@
+.quienes-somos-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #004d4d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-quienes-somos {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #004d4d;
+}
+
+.diagrama-departamentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+   align-items: start;
+}
+
+.departamento {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 77, 77, 0.1);
+  flex: 1 1 calc(33.333% - 30px); 
+  min-width: 260px;
+  max-width: 350px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #004d4d;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.departamento:hover {
+  transform: translateY(-5px);
+}
+
+.titulo-dep {
+  font-weight: 800;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #085454;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.titulo-dep:hover {
+  color: #085454;
+}
+
+/* ANIMACIÓN DE MIEMBROS (ACORDEÓN) */
+.miembros {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 0;
+}
+
+.miembros.abierto {
+  opacity: 1;
+  max-height: 1000px;
+  margin-top: 15px;
+}
+
+.miembro {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.miembro:hover {
+  background-color: #e6f2f2;
+}
+
+.miembro-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #085454;
+  box-shadow: 0 2px 8px rgba(0, 77, 77, 0.2);
+}
+
+.miembro p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #004d4d;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .diagrama-departamentos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .departamento {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

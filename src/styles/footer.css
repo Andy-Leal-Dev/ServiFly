@@ -1,0 +1,124 @@
+.footer {
+  color: #0F1C2F;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.footer p {
+  margin-bottom: 1.5rem; 
+}
+
+.footer-slogan {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer-icons a.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip styling */
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* coloca el tooltip encima */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0F1C2F;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+
+/* Flecha del tooltip */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #0F1C2F transparent transparent transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Mostrar tooltip */
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.footer-link {
+  color: #004d4d;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInLink 0.6s ease-out 0.4s forwards;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #015757;
+  text-decoration: underline;
+}
+
+
+@keyframes fadeInLink {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

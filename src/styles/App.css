@@ -8,11 +8,6 @@ html, body {
   background-color: #f5f7fa;
 }
 
-.main-content {
-  padding-top: 60px;
-  background-color: #f2f2f2; /* Ajusta según la altura real de tu navbar */
-}
-
 .login-container {
   display: flex;
   height: 100vh;

@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Footer from '../components/footer'
 import logo from '../assets/img/logo.png';
 import logogoogle from '../assets/img/logogoogle.png';
 import logofacebook from '../assets/img/logofacebook.png';
@@ -7,12 +11,21 @@ import '../styles/login.css';
 
 function Login() {
   const [isRegistering, setIsRegistering] = useState(false);
+const location = useLocation(); // 👈 obtiene la URL actual
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (params.get('register') === 'true') {
+      setIsRegistering(true); //  muestra el formulario de registro automáticamente
+       window.history.replaceState({}, '', '/login'); // Hace que en la url se limpie y se coloque solo /login
+    }
+  }, [location]);
   return (
     <>
       <div className="login-container">
         {/* Panel izquierdo fijo */}
         <div className="login-left">
+          <Link to="/">
           <img
             src={logo}
             alt="ServiFly Logo"
@@ -20,9 +33,10 @@ function Login() {
               width: '300px',
               marginBottom: '-1rem',
               marginRight: '25rem',
-              marginTop: '-10rem'
+              marginTop: '-9rem'
             }}
           />
+          </Link>
           <h1 style={{ marginTop: '5rem', marginBottom: '2rem' }}>
             Conecta con los expertos <br />
             más demandados en <br />
@@ -53,9 +67,6 @@ function Login() {
                     <label htmlFor="apellidos">Apellidos</label>
                     <input type="text" id="apellidos" placeholder="Apellidos" />
 
-                    <label htmlFor="cedula">Cédula</label>
-                    <input type="text" id="cedula" placeholder="Cédula" />
-
                     <label htmlFor="correo">Correo electrónico</label>
                     <input type="email" id="correo" placeholder="Correo electrónico" />
 
@@ -68,10 +79,18 @@ function Login() {
                     <label htmlFor="nacimiento">Fecha de nacimiento</label>
                     <input type="date" id="nacimiento" />
 
+                    <label htmlFor='password'>Contraseña</label>
+                    <input type='password' id='password'/>
+
+                    <label htmlFor='passwordRepeat'>Repita la Contraseña</label>
+                    <input type='password' id='passwordRepeat' />
+
                     <div className="form-checkbox">
                       <input type="checkbox" id="terms" />
-                      <label htmlFor="terms">Acepto los términos y servicios</label>
-                    </div>
+                      <label htmlFor="terms">
+                        Acepto los <Link to="/Condiciones" target="_blank" style={{ color: '#004d4d'  }}>términos y servicios</Link>
+                        </label>
+                        </div>
 
                     <button type="submit">Registrarse</button>
                     <div className="links">
@@ -111,16 +130,10 @@ function Login() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer style={{
-        backgroundColor: '#f2f2f2',
-        color: '#0F1C2F',
-        textAlign: 'center',
-        padding: '1rem',
-        marginTop: '2rem'
-      }}>
-        <p> <strong>&copy; {new Date().getFullYear()} ServiFly. Todos los derechos reservados.</strong></p>
-      </footer>
+      {/* Complemento del  Footer */}
+     
+      <Footer /> 
+      
     </>
   );
 }
