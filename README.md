@@ -1,3 +1,14 @@
+V 0.1.4.1 (
+
+    -Se agrego la carpeta utils, otra vez, por alguna razón se elimino
+
+    -Se agrego un static.json para probar el deploy en render y que funcione las subrutas
+
+    -Se agrego una carpeta members que esta llena de imagenes de los participantes
+
+    -Se agrego un archivo en utils, llamado memberImages.js que cumple la función de importar todas las imagenes de los miembros y luego ser llamado en whoAre.jsx
+)
+
 V 0.1.3.1 (
 
     -Se agrego la carpeta components

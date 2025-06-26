@@ -1,27 +1,35 @@
 import { useState } from 'react';
 import '../styles/whoAre.css';
-import Logo from '../assets/img/logo.png';
+import memberImages from '../utils/memberImages';
 
 const departamentos = {
   "Project Manager": [
-    { nombre: "Andrierber Leal", img: Logo },
+    { nombre: "Andrierber Leal", img: memberImages.andrierberLeal },
   ],
   "Desarrollo Frontend": [
-    { nombre: "Oscar Santander", img: Logo },
-    { nombre: "Endyths Carrasquel", img: Logo }
+    { nombre: "Oscar Santander", img: memberImages.endythsCarrasquel },
+    { nombre: "Endyths Carrasquel", img: memberImages.oscarSantander }
   ],
   "Desarrollo Backend": [
-    { nombre: "Miguel Ponce", img: Logo },
-    { nombre: "Julian noMeAcuerdoelApellido", img: Logo }
+    { nombre: "Miguel Ponce", img: memberImages.miguelPonce },
+    { nombre: "Julian Amer", img: memberImages.julianAmer },
+    { nombre: "Dixon", img: memberImages.miguelPonce }
   ],
   "QA tester": [
-    { nombre: "Un Random", img: Logo }
+    { nombre: "Luis Sepulveda", img: memberImages.luisSepulveda },
+    { nombre: "Tony", img: memberImages.luisSepulveda },
+    { nombre: "Alexander Berrueta", img: memberImages.alexanderBerrueta}
   ],
   "Equipo Legal": [
-    { nombre: "No se", img: Logo }
+    { nombre: "Jose Carrasquel", img: memberImages.joseCarrasquel },
+    { nombre: "Sebastian Julio", img: memberImages.sebastianJulio},
+    { nombre: "Diana Herrera", img: memberImages.dianaHerrera},
+    { nombre: "Valeria Zambrano", img: memberImages.valeriaZambrano}
   ],
   "Marketing": [
-    { nombre: "El Primo", img: Logo }
+    { nombre: "Andres Flores", img: memberImages.andresFlores },
+    { nombre: "Genesis Fernández", img: memberImages.genesisFernandez},
+    { nombre: "Cristopher Gomez", img: memberImages.cristopherGomez}
   ],
 };
 
