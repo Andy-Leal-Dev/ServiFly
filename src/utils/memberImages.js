@@ -12,6 +12,7 @@ import joseCarrasquel from '../assets/members/JoseCarrasquel.jpg';
 import luisSepulveda from '../assets/members/LuisSepulveda.jpg';
 import sebastianJulio from '../assets/members/SebastianJulio.jpg';
 import valeriaZambrano from '../assets/members/ValeriaZambrano.jpg';
+import dixonRamos from '../assets/members/DixonRamos.jpg'
 
 const memberImages = {
   andrierberLeal,
@@ -27,7 +28,8 @@ const memberImages = {
   joseCarrasquel,
   luisSepulveda,
   sebastianJulio,
-  valeriaZambrano
+  valeriaZambrano,
+  dixonRamos
 };
 
 export default memberImages;

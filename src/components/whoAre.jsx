@@ -7,17 +7,16 @@ const departamentos = {
     { nombre: "Andrierber Leal", img: memberImages.andrierberLeal },
   ],
   "Desarrollo Frontend": [
-    { nombre: "Oscar Santander", img: memberImages.endythsCarrasquel },
-    { nombre: "Endyths Carrasquel", img: memberImages.oscarSantander }
+    { nombre: "Oscar Santander", img: memberImages.oscarSantander },
+    { nombre: "Endyths Carrasquel", img: memberImages.endythsCarrasquel }
   ],
   "Desarrollo Backend": [
     { nombre: "Miguel Ponce", img: memberImages.miguelPonce },
     { nombre: "Julian Amer", img: memberImages.julianAmer },
-    { nombre: "Dixon", img: memberImages.miguelPonce }
+    { nombre: "Dixon Ramos", img: memberImages.dixonRamos }
   ],
   "QA tester": [
     { nombre: "Luis Sepulveda", img: memberImages.luisSepulveda },
-    { nombre: "Tony", img: memberImages.luisSepulveda },
     { nombre: "Alexander Berrueta", img: memberImages.alexanderBerrueta}
   ],
   "Equipo Legal": [

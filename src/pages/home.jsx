@@ -3,7 +3,6 @@ import logo from '../assets/img/LogoBlanco.png';
 import fondo1 from '../assets/img/fondo1.jpg';
 import fondo2 from '../assets/img/fondo2.jpg';
 import fondo3 from '../assets/img/fondo3.jpg';
-import busqueda from '../assets/img/busqueda.png';
 import icono1 from '../assets/img/icono1.png';
 import icono2 from '../assets/img/icono2.png';
 import icono3 from '../assets/img/icono3.png';
@@ -46,10 +45,7 @@ function Home() {
           <div className="logo">
             <img src={logo} alt="ServiFly Logo" />
           </div>
-          <div className="search-container">
-            <img src={busqueda} alt="icono búsqueda" className="busqueda-icono" />
-            <input type="text" placeholder="¡Busquemos algo!" className="search-bar" />
-          </div>
+         
           <nav className="menu">
             <a href="/">Inicio</a>
             <a href="#institucional">Nosotros</a>
