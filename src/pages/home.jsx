@@ -150,17 +150,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="beneficios-main">
-          <img src={ilustracion} alt="Ilustración" />
-          <div className="texto-beneficio">
-            <h2>Elige la forma favorita de <br />contratar personal.</h2>
-            <p>
-              Accede a todas nuestras herramientas que te ofrecen increíbles beneficios
-              para tu día a día, nuestra meta es apoyar a todos nuestros usuarios a
-              alcanzar el máximo potencial a la hora de administrar su tiempo
-            </p>
-          </div>
-        </div>
+        
       </section>
 
       {/* SECCIÓN INSTITUCIONAL vision,mision,valores, etc */}
@@ -170,6 +160,37 @@ function Home() {
       <div className="home-section">
         <WhoAre />
       </div>
+
+      <section className="contacto-section">
+  <div className="beneficios-main">
+    <img src={ilustracion} alt="Ilustración" />
+    <div className="texto-beneficio">
+      <h2>Contáctanos</h2>
+      <form
+        className="contact-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert('Gracias por tu mensaje!');
+          e.target.reset();
+        }}
+      >
+        <label htmlFor="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+
+        <label htmlFor="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Tu email" required />
+
+        <label htmlFor="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
       {/* Footer, cada que se llama se debe pasar con la propiedad "bgColor" y pasarle el color */}
       <Footer bgColor="#fff" />
     </>

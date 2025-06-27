@@ -1,3 +1,31 @@
+V 0.1.6.3 (
+
+    -Modificacion de estilos en la parte de Home
+
+    -Se agrego animaciones para la parte de beneficios
+
+    -Se Cambio el estilo de la Mision y Vision, se agrego otro de Objetivos y Se elimino los de los valores
+
+    -Se Cambio la img Ilustracion.png por otra y se movio a la parte de abajo
+
+    -Junto a esa Ilustracion se elimino el mensaje que tenia y se le agrego un formulario de contacto
+
+    -Se quitaron el apartado de los botones de "conoce al equipo" y se agrego un carrusel de fotos con las fotos de los integrantes
+
+    -Se cambio la foto de uno de los estudiantes
+)
+
+V 0.1.5.2 (
+
+    -Se quito la barra de navegación del Home
+
+    -Se arreglo el error de fotos invetidas
+
+    -Se arreglaron pequeños errores al mostrar los nombre e imagenes de los miembros
+
+    -Se agregaron los terminos y condiciones, agregandole algunos estilos
+)
+
 V 0.1.4.1 (
 
     -Se agrego la carpeta utils, otra vez, por alguna razón se elimino
