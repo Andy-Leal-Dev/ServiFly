@@ -1,3 +1,9 @@
+V 0.2.7.6 (
+
+    -Se modifico una letra que generaba un error al subir al servidor "workerCard"
+    
+)
+
 V 0.2.7.5 (
 
     -Se modifico una letra que generaba un error al subir al servidor "mapView"
