@@ -1,0 +1,52 @@
+.profile-container {
+  padding: 40px 20px;
+
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  animation: slideFade 0.5s ease forwards;
+}
+
+.profile-title {
+  font-size: 2.2rem;
+  color: #01403A;
+  margin-bottom: 30px;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info label {
+  font-weight: 600;
+  color: #01403A;
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #0F1C2F;
+  font-size: 1rem;
+}
+
+.edit-button {
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: #01403A;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #023530;
+}

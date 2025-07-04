@@ -116,7 +116,7 @@ form button {
   margin: 1rem 0;
   border: none;
   border-radius: 8px;
-  background-color: #085454;
+  background-color: #01403A;
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -181,6 +181,34 @@ a strong {
 
 .slide-in {
   animation: slideFade 0.5s ease forwards;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem; 
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.input-icon-wrapper .input-icon {
+  position: absolute;
+  color: #01403A !important;
+  top: 50%;
+  left: 0rem;    
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 @keyframes slideFade {

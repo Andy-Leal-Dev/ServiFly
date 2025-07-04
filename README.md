@@ -1,3 +1,23 @@
+V 0.2.7.4 (
+
+    -Se agrego una nueva dependencia para iconos react-icons
+
+    -Usando la dependencia de iconos se agregaron iconos a los formularios de inicio de sesión y registro
+
+    -Se agrego el componente mapView que maneja la carga de la api del mapa, al igual que se agrego sus estilos propios con un archivo css
+
+    -Se agrego la estructura principal del dashboard
+
+    -Se agregaron los componentes de serviceCard,softwareCard y workercard con sus respectivos archivos de css, cada uno de esos componentes genera una carta de presentación en el dashboard
+
+    -Se agrego el componente de sidebard con su archivo css que se encarga de renderizar una barra lateral desplegable
+
+    -Se agregaron y renderizaron las vistas de Profile e History, que se acceden mediando la barra lateral del dashboard
+
+    -Se agrego un modal mediante un componente PasswordResetModal para la parte de "haz olvidado tu contraseña", aun falta una parte
+    
+)
+
 V 0.1.6.3 (
 
     -Modificacion de estilos en la parte de Home

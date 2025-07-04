@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useState,useEffect  } from 'react';
+import { useLocation,Link } from 'react-router-dom';
+import { FaUser, FaEnvelope, FaLock, FaPhone, FaHome, FaBirthdayCake } from 'react-icons/fa';
 import Footer from '../components/footer'
+import PasswordResetModal from '../components/PasswordResetModal';
 import logo from '../assets/img/logo.png';
 import logogoogle from '../assets/img/logogoogle.png';
 import logofacebook from '../assets/img/logofacebook.png';
@@ -10,8 +10,18 @@ import Icon from '../assets/img/Icon.png';
 import '../styles/login.css';
 
 function Login() {
-  const [isRegistering, setIsRegistering] = useState(false);
-const location = useLocation(); // 👈 obtiene la URL actual
+const [showResetModal, setShowResetModal] = useState(false);
+const [resetEmail, setResetEmail] = useState('');
+const [isRegistering, setIsRegistering] = useState(false);
+const location = useLocation(); //  obtiene la URL actual
+
+const handlePasswordReset = (e) => {
+  e.preventDefault();
+  console.log('Solicitando restablecimiento para:', resetEmail);
+  // Aquí puedes usar tu lógica de backend o mostrar un mensaje
+  setShowResetModal(false);
+  setResetEmail('');
+};
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -61,30 +71,54 @@ const location = useLocation(); // 👈 obtiene la URL actual
               <div className="form">
                 {isRegistering ? (
                   <>
-                    <label htmlFor="nombres">Nombres</label>
-                    <input type="text" id="nombres" placeholder="Nombres" />
+                      <label htmlFor="nombres">Nombres</label>
+                      <div className="input-icon-wrapper">
+                        <FaUser className="input-icon" style={{ color: '#01403A' }} />
+                        <input type="text" id="nombres" placeholder="Nombres" />
+                      </div>
 
-                    <label htmlFor="apellidos">Apellidos</label>
-                    <input type="text" id="apellidos" placeholder="Apellidos" />
+                      <label htmlFor="apellidos">Apellidos</label>
+                      <div className="input-icon-wrapper">
+                       <FaUser className="input-icon" style={{ color: '#01403A' }} />
+                       <input type="text" id="apellidos" placeholder="Apellidos" />
+                     </div>
 
-                    <label htmlFor="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="Correo electrónico" />
+                      <label htmlFor="correo">Correo electrónico</label>
+                      <div className="input-icon-wrapper">
+                       <FaEnvelope className="input-icon" style={{ color: '#01403A' }} />
+                       <input type="email" id="correo" placeholder="Correo electrónico" />
+                     </div>
 
-                    <label htmlFor="telefono">Teléfono</label>
-                    <input type="text" id="telefono" placeholder="Teléfono" />
+                      <label htmlFor="telefono">Teléfono</label>
+                      <div className="input-icon-wrapper">
+                       <FaPhone className="input-icon" style={{ color: '#01403A' }} />
+                       <input type="text" id="telefono" placeholder="Teléfono" />
+                      </div>
 
-                    <label htmlFor="direccion">Dirección</label>
-                    <input type="text" id="direccion" placeholder="Dirección" />
+                      <label htmlFor="direccion">Dirección</label>
+                      <div className="input-icon-wrapper">
+                       <FaHome className="input-icon" style={{ color: '#01403A' }} />
+                       <input type="text" id="direccion" placeholder="Dirección" />
+                     </div>
 
-                    <label htmlFor="nacimiento">Fecha de nacimiento</label>
-                    <input type="date" id="nacimiento" />
+                     <label htmlFor="nacimiento">Fecha de nacimiento</label>
+                     <div className="input-icon-wrapper">
+                      <FaBirthdayCake className="input-icon" style={{ color: '#01403A' }} />
+                      <input type="date" id="nacimiento" />
+                     </div>
 
-                    <label htmlFor='password'>Contraseña</label>
-                    <input type='password' id='password'/>
+                     <label htmlFor='password'>Contraseña</label>
+                     <div className="input-icon-wrapper">
+                       <FaLock className="input-icon" style={{ color: '#01403A' }} />
+                       <input type='password' id='password' />
+                    </div>
 
                     <label htmlFor='passwordRepeat'>Repita la Contraseña</label>
-                    <input type='password' id='passwordRepeat' />
-
+                    <div className="input-icon-wrapper">
+                     <FaLock className="input-icon" style={{ color: '#01403A' }} />
+                     <input type='password' id='passwordRepeat' />
+                   </div> 
+                   
                     <div className="form-checkbox">
                       <input type="checkbox" id="terms" />
                       <label htmlFor="terms">
@@ -92,20 +126,37 @@ const location = useLocation(); // 👈 obtiene la URL actual
                         </label>
                         </div>
 
-                    <button type="submit">Registrarse</button>
+                    <button type="submit" style={{background: "#01403A" }}>Registrarse</button>
                     <div className="links">
-                      <a href="#" onClick={() => setIsRegistering(false)}>¿Ya tienes una cuenta? <strong>Inicia sesión</strong></a>
+                      <a href="#" onClick={() => setIsRegistering(false)}>¿Ya tienes una cuenta? <strong style={{color: "#01403A"}}>Inicia sesión</strong></a>
                     </div>
                   </>
                 ) : (
                   <>
-                    <label htmlFor="login">Email o nombre de usuario</label>
-                    <input type="text" id="login" placeholder="Email o nombre de usuario" />
+                   <label htmlFor="login">Email o nombre de usuario</label>
+                  <div className="input-icon-wrapper">
+                     <FaEnvelope className="input-icon" />
+                     <input type="text" id="login" placeholder="Email o nombre de usuario" />
+                  </div>
 
-                    <label htmlFor="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="Contraseña" />
-
-                    <button type="submit">Iniciar sesión</button>
+                      <label htmlFor="password">Contraseña</label>
+                  <div className="input-icon-wrapper">
+                   <FaLock className="input-icon" />
+                  <input type="password" id="password" placeholder="Contraseña" />
+                    </div>
+                     <button type="submit" style={{ background: "#01403A" }}>
+                      <Link
+                        to="/Dashboard"
+                        style={{
+                        background: "#01403A",
+                        color: "#fff",
+                        textDecoration: "none",
+                        textAlign: "center",
+                        borderRadius: "4px"
+                        }}
+                       >
+                        Iniciar sesión
+                    </Link></button>
                     <hr />
 
                     <button className="google">
@@ -119,8 +170,10 @@ const location = useLocation(); // 👈 obtiene la URL actual
                     </button>
 
                     <div className="links">
-                      <a href="#">¿Has olvidado tu contraseña?</a><br />
-                      <a href="#" onClick={() => setIsRegistering(true)}>¿No tienes una cuenta? <strong>Regístrate</strong></a>
+                     <a href="#" onClick={(e) => { e.preventDefault(); setShowResetModal(true); }}>
+                      ¿Has olvidado tu contraseña?
+                      </a><br />
+                      <a href="#" onClick={() => setIsRegistering(true)}>¿No tienes una cuenta? <strong style={{color: "#01403A"}}>Regístrate</strong></a>
                     </div>
                   </>
                 )}
@@ -130,8 +183,14 @@ const location = useLocation(); // 👈 obtiene la URL actual
         </div>
       </div>
 
+      <PasswordResetModal
+  show={showResetModal}
+  onClose={() => setShowResetModal(false)}
+  onSubmit={handlePasswordReset}
+  email={resetEmail}
+  setEmail={setResetEmail}/>
       {/* Complemento del  Footer */}
-     
+  
       <Footer /> 
       
     </>
