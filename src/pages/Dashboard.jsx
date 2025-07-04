@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Sidebar from '../components/sidebard';
-import MapView from '../components/MapView';
+import MapView from '../components/mapView';
 import WorkerCard from '../components/WorkerCard';
 import SoftwareCard from '../components/softwareCard';
 import ServiceCard from '../components/serviceCard';

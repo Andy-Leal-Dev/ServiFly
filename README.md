@@ -1,3 +1,8 @@
+V 0.2.7.5 (
+
+    -Se modifico una letra que generaba un error al subir al servidor "mapView"
+    
+)
 V 0.2.7.4 (
 
     -Se agrego una nueva dependencia para iconos react-icons
@@ -15,7 +20,7 @@ V 0.2.7.4 (
     -Se agregaron y renderizaron las vistas de Profile e History, que se acceden mediando la barra lateral del dashboard
 
     -Se agrego un modal mediante un componente PasswordResetModal para la parte de "haz olvidado tu contraseña", aun falta una parte
-    
+
 )
 
 V 0.1.6.3 (
