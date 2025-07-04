@@ -1,5 +1,4 @@
-import React from 'react';
-import '../styles/Workercard.css';
+import '../styles/workercard.css';
 
 export default function WorkerCard({ name, category }) {
   return (
