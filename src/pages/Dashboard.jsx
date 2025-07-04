@@ -1,7 +1,7 @@
 import  { useState } from 'react';
 import Sidebar from '../components/sidebard';
 import MapView from '../components/mapView';
-import WorkerCard from '../components/workerCard';
+import WorkerCard from '../components/workercard';
 import SoftwareCard from '../components/softwareCard';
 import ServiceCard from '../components/serviceCard';
 import '../styles/Dashboard.css'

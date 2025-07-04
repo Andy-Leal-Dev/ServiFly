@@ -1,3 +1,9 @@
+V 0.2.7.7 (
+
+    -Se modifico una letra que generaba un error al subir al servidor "workerCard" la c, está vez xd
+    
+)
+
 V 0.2.7.6 (
 
     -Se modifico una letra que generaba un error al subir al servidor "workerCard"
