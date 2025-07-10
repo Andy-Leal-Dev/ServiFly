@@ -1,5 +1,11 @@
-V 0.2.7.8 (
+V 0.2.7.9
 
+    -Cambios en el Dashboard
+    -Mejorado un poco el Diseño del Dashboard
+    -Quite el apartado de 
+
+V 0.2.7.8 (
+    
     -Error en un archivo css, genero incompatibilidad en el servidor 
     
 )

@@ -2,15 +2,14 @@
   background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
-  width: 220px;
+  width: 250px; /* Igual que .service-card */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideFade 0.5s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .worker-card:hover {
@@ -22,7 +21,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #01403A;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .worker-name {
@@ -35,7 +34,7 @@
   background-color: #01403A;
   color: #ffffff;
   border: none;
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
   border-radius: 12px;
   cursor: pointer;
