@@ -118,7 +118,7 @@ form button {
   display: block;
   border: none;
   border-radius: 8px;
-  background-color: #00838f; /* o #01403A si prefieres el estilo actual */
+  background-color: #00838f; 
   color: white;
   font-weight: bold;
   cursor: pointer;

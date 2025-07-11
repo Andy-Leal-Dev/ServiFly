@@ -1,3 +1,16 @@
+V 0.9.5.5 (
+
+    -Modificaciones de Css generales
+    -Modificaciones de rutas
+    -Modificaciones para obtener la dirección
+    -Modificaciones en paginas 
+    -Modificación en componentes
+    -Se añadio otra carpeta de context
+    -Se añadio un archivo Location context para obtener la dirección y pasarla a los mapas
+    -Se añadio la vista de Direcciones
+    -Se añadio el componente de addresMap
+)
+
 V 0.7.3.2 (
 
     -Hacer responsive las paginas que faltaban

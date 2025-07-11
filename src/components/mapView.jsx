@@ -2,10 +2,12 @@ import { useEffect, useRef } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import '../styles/mapView.css';
 
-export default function MapView() {
+export default function MapView({ userLocation }) {
   const mapRef = useRef(null);
 
   useEffect(() => {
+    if (!userLocation) return;
+
     const apiKey = import.meta.env.VITE_GoogleMapsAPI;
 
     const loader = new Loader({
@@ -14,33 +16,23 @@ export default function MapView() {
     });
 
     loader.load().then(() => {
-      if (!navigator.geolocation) {
-        console.error("Geolocation is not supported.");
-        return;
-      }
+      const { lat, lng } = userLocation;
 
-      navigator.geolocation.getCurrentPosition((position) => {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-
-        const map = new window.google.maps.Map(mapRef.current, {
-          center: { lat, lng },
-          zoom: 15,
-          streetViewControl: false, 
-          mapTypeControl: false,
-        });
-
-        new window.google.maps.Marker({
-          position: { lat, lng },
-          map: map,
-        });
-      }, (err) => {
-        console.error("Error getting location:", err);
+      const map = new window.google.maps.Map(mapRef.current, {
+        center: { lat, lng },
+        zoom: 15,
+        streetViewControl: false,
+        mapTypeControl: false,
       });
-    }).catch((e) => {
+
+      new window.google.maps.Marker({
+        position: { lat, lng },
+        map,
+      });
+    }).catch(e => {
       console.error("Error loading Google Maps:", e);
     });
-  }, []);
+  }, [userLocation]);
 
-  return <div className="map-container" ref={mapRef} />;
+  return <div className="map-container" ref={mapRef} style={{ height: '300px' }} />;
 }

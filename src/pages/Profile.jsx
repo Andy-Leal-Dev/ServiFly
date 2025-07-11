@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaBell, FaEnvelope,FaEye, FaEyeSlash } from 'react-icons/fa';
 import Sidebar from '../components/sidebard';
 import logo from '../assets/img/logo.png';
-import userPhoto from '../assets/members/Andrierber.jpg'; // Usa una imagen por defecto
+import userPhoto from '../assets/members/Andrierber.jpg'; 
 import '../styles/Profile.css';
 
 export default function Profile() {
@@ -18,7 +18,6 @@ export default function Profile() {
    apellidos: 'Pérez Ramirez',
    email: 'juanperez@email.com',
    telefono: '+54 11 1234 5678',
-   direccion: 'Av. Siempre Viva 123, Buenos Aires',
    nacimiento: '1997-10-12',
    });
    
@@ -77,9 +76,6 @@ export default function Profile() {
                 <label>Teléfono:</label>
                 <p>+54 11 1234 5678</p>
 
-                <label>Dirección:</label>
-                <p>Av. Siempre Viva 123, Buenos Aires</p>
-
                 <label>Fecha de Nacimiento:</label>
                 <p>12/10/1997</p>
                 <label>Contraseña:</label>
@@ -137,9 +133,6 @@ export default function Profile() {
               
               <label>Teléfono:</label>
               <input name="telefono" value={formData.telefono} onChange={handleChange} />
-              
-              <label>Dirección:</label>
-              <input name="direccion" value={formData.direccion} onChange={handleChange} />
               
               <label>Fecha de Nacimiento:</label>
               <input type="date" name="nacimiento" value={formData.nacimiento} onChange={handleChange} />

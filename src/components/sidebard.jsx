@@ -14,10 +14,11 @@ export default function Sidebar({ collapsed, toggleSidebar }) {
           <ul className="sidebar-menu">
             <li><Link to="/Profile">Perfil</Link></li>
             <li><Link to="/History">Historial</Link></li>
+            <li><Link to="/Direcciones">Mis direcciones</Link></li>
             <li><Link to="/Favoritos">Favoritos</Link></li>
             <li><Link to="/Review">Reseñas</Link></li>
-            <li><Link to="/Condiciones">Condiciones</Link></li>
-            <li><Link to="/Politics">Politicas</Link></li>
+            <li><Link to="/Condiciones" target="_blank">Condiciones</Link></li>
+            <li><Link to="/Politics" target="_blank">Politicas</Link></li>
             <li><Link to="/"> Salir</Link></li>
           </ul>
         </>

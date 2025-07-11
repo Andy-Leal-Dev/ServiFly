@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState,useContext  } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from '../components/sidebard';  
 import MapView from '../components/mapView';
 import WorkerCard from '../components/workercard';
 import ServiceCard from '../components/serviceCard';
+import { LocationContext } from '../context/LocationContext';
 import logo from '../assets/img/logo.png';
 import { FaSearch, FaBell, FaEnvelope, FaFilter } from 'react-icons/fa';
 import '../styles/Dashboard.css';
@@ -11,6 +12,10 @@ import '../styles/Dashboard.css';
 export default function Dashboard() {
   const [collapsed, setCollapsed] = useState(false);
   const toggleSidebar = () => setCollapsed((prev) => !prev);
+  const { userLocation } = useContext(LocationContext);
+   if (!userLocation) {
+    return <p>Cargando ubicación...</p>;
+  }
 
   const history = [
     { id: 1, title: 'Desarrollo Web', provider: 'Jhon Doe', price: '50$', status: 'En proceso' },
@@ -82,7 +87,7 @@ export default function Dashboard() {
 
           <div className="top-section">
             <div className="map-column">
-              <MapView />
+             <MapView userLocation={userLocation} />
             </div>
 
             <div className="results-column">
