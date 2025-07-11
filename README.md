@@ -2,7 +2,7 @@ V 0.2.7.9
 
     -Cambios en el Dashboard
     -Mejorado un poco el Diseño del Dashboard
-    -Quite el apartado de 
+    -Quite el apartado de SoftwareCard
 
 V 0.2.7.8 (
     
