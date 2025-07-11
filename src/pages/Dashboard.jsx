@@ -4,6 +4,7 @@ import MapView from '../components/MapView';
 import WorkerCard from '../components/WorkerCard';
 import SoftwareCard from '../components/SoftwareCard';
 import ServiceCard from '../components/ServiceCard';
+import ProfessionalProfile  from '../components/Professionalprofile'; // Importa el componente de perfil profesional
 import logo from '../assets/img/logo.png';
 import { FaSearch, FaBell, FaEnvelope, FaFilter } from 'react-icons/fa';
 import '../styles/Dashboard.css';

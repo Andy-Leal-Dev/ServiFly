@@ -6,6 +6,7 @@ import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import History from '../pages/History';
 import Chat from '../pages/Chat';
+import ProfessionalProfile from '../components/Professionalprofile';
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path='/Profile' element={<Profile />}   />
       <Route path='/History' element={<History />}   />
       <Route path='/Chat' element={<Chat />}   />
+      <Route path='/perfil' element={<ProfessionalProfile />} />
     </Routes>
   );
 }

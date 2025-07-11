@@ -1,6 +1,9 @@
-git commit -m "V 0.3.0.0
+V 0.3.1.1
 
-- Agregada la página del chat"
+    -Agregado el perfil profesional en el dashboard
+    -le quite el apartado de softeware al sidebard
+
+
 V 0.3.0.0
 
     -Agregado la pagina del chat

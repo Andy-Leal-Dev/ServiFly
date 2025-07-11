@@ -1,0 +1,237 @@
+.professional-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fa;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  max-width: 900px;
+  width: 100%;
+}
+
+.profile-header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  background-color: #2f5f5f;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  margin-bottom: 5px;
+}
+
+.specialties {
+  color: #226677;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.rating-value {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.info-tags span {
+  margin-right: 15px;
+  color: #444;
+  font-size: 14px;
+}
+
+.contact-button {
+  background-color: #146c64;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-details {
+  margin-top: 30px;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.service-tags span {
+  background-color: #145f5f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.reviews-section {
+  margin-top: 40px;
+}
+
+.review {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.time-ago {
+  font-size: 12px;
+  color: gray;
+}
+
+.view-all {
+  display: block;
+  margin-top: 10px;
+  color: #146c64;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.view-all-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.view-all-reviews button {
+  background-color: #145f5f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* --- Media Queries para responsive --- */
+
+@media (max-width: 768px) {
+  .professional-profile-container {
+    padding: 20px 15px;
+  }
+
+  .profile-card {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-tags span {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .contact-button {
+    width: 100%;
+  }
+
+  .service-tags {
+    justify-content: center;
+  }
+
+  .review {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .review-content {
+    flex: none;
+  }
+
+  .view-all-reviews {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .view-all-reviews button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile-image img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact-button {
+    padding: 12px;
+  }
+
+  .service-tags span {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .rating-value {
+    font-size: 14px;
+  }
+}

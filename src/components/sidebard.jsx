@@ -17,7 +17,6 @@ export default function Sidebar({ collapsed, toggleSidebar }) {
             <li><Link to="/History">Historial</Link></li>
             <li><Link to="/recomendados">Recomendados</Link></li>
             <li><Link to="/trabajadores">Trabajadores</Link></li>
-            <li><Link to="/software">Soluciones Software</Link></li>
             <li><Link to="/"> Salir</Link></li>
           </ul>
         </>
