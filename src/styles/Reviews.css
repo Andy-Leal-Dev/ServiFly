@@ -1,0 +1,65 @@
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.review-date {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-comment {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.review-response {
+  background: #e0f2f1;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #005a5a;
+}
+
+.reply-button {
+  margin-top: 10px;
+  background-color: #01403A;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.reply-button:hover {
+  background-color: #023530;
+}

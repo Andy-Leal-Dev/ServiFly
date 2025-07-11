@@ -1,18 +1,33 @@
-V 0.3.1.1
+V 0.7.3.0 (
+
+    -Se agrego la pagina de Politicas
+    -Se agrego Pagina de Review
+    -Se agrego Pagina de Favoritos
+    -Se agrego Pagina de Contacto a Profesionales
+    -Se agrego el componente ReviewCard
+    -Modificaciones generales en varios componentes (Estructura)
+    -Modificaciones generales en varios estilos
+    -Modificaciones en Vistas
+
+)
+
+V 0.3.1.1 (
 
     -Agregado el perfil profesional en el dashboard
     -le quite el apartado de softeware al sidebard
+)
 
-
-V 0.3.0.0
+V 0.3.0.0 (
 
     -Agregado la pagina del chat
+)
 
-V 0.2.7.9
+V 0.2.7.9 (
 
     -Cambios en el Dashboard
     -Mejorado un poco el Diseño del Dashboard
     -Quite el apartado de SoftwareCard
+)
 
 V 0.2.7.8 (
     
@@ -22,7 +37,7 @@ V 0.2.7.8 (
 
 V 0.2.7.7 (
 
-    -Se modifico una letra que generaba un error al subir al servidor "workerCard" la c, está vez xd
+    -Se modifico una letra que generaba un error al subir al servidor "workerCard" la c
     
 )
 

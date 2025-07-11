@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import Sidebar from '../components/sidebard';  // corregido aquí
-import MapView from '../components/MapView';
-import WorkerCard from '../components/WorkerCard';
-import SoftwareCard from '../components/SoftwareCard';
-import ServiceCard from '../components/ServiceCard';
-import ProfessionalProfile  from '../components/Professionalprofile'; // Importa el componente de perfil profesional
+import { Link } from 'react-router-dom';
+import Sidebar from '../components/sidebard';  
+import MapView from '../components/mapView';
+import WorkerCard from '../components/workercard';
+import ServiceCard from '../components/serviceCard';
 import logo from '../assets/img/logo.png';
 import { FaSearch, FaBell, FaEnvelope, FaFilter } from 'react-icons/fa';
 import '../styles/Dashboard.css';
@@ -45,7 +44,7 @@ export default function Dashboard() {
     }
   ];
 
-  const userPhotoUrl = '/path/to/user/photo.jpg'; 
+  const userPhotoUrl = 'https://randomuser.me/api/portraits/men/13.jpg'; 
 
   return (
     <div className="dashboard-container">
@@ -63,7 +62,7 @@ export default function Dashboard() {
 
         <div className="header-icons-profile">
           <FaBell className="icon-header" aria-label="Notificaciones" />
-          <FaEnvelope className="icon-header" aria-label="Mensajes" />
+          <Link to="/Chat"><FaEnvelope className="icon-header" aria-label="Mensajes" /></Link>
           <span className="orders-text">Órdenes</span>
           <div className="profile-circle">
             <img src={userPhotoUrl} alt="Foto de perfil" />

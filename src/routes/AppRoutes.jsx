@@ -6,7 +6,11 @@ import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import History from '../pages/History';
 import Chat from '../pages/Chat';
-import ProfessionalProfile from '../components/Professionalprofile';
+import ProfessionalProfile from '../pages/ProfessionalProfile';
+import Review from '../pages/ReviewsPage'
+import Favoritos from '../pages/Favoritos'
+import Politics  from '../pages/Politics';
+import HiringForm from '../pages/HiringForm';
 
 export default function AppRoutes() {
   return (
@@ -18,7 +22,11 @@ export default function AppRoutes() {
       <Route path='/Profile' element={<Profile />}   />
       <Route path='/History' element={<History />}   />
       <Route path='/Chat' element={<Chat />}   />
-      <Route path='/perfil' element={<ProfessionalProfile />} />
+      <Route path='/proPerfil' element={<ProfessionalProfile />} />
+      <Route path='/Review' element={<Review />} />
+      <Route path='/Favoritos' element={<Favoritos />}/>
+      <Route path='/Politics' element={<Politics/>}/>
+      <Route path='/HiringForm' element={<HiringForm />}/>
     </Routes>
   );
 }

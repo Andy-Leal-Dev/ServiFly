@@ -87,7 +87,6 @@ function Home() {
       <section className="servicios">
         <h2 className="titulo-servicios">
           Algunos de nuestros servicios{' '}
-          <a href="#" className="explorar-link">Explorar</a>
         </h2>
 
         <div className="cards-servicios">
@@ -95,7 +94,7 @@ function Home() {
             <img src={fondo1} alt="Electricidad" />
             <div className="info">
               <h3>Electricidad</h3>
-              <p>Lorem ipsum dolor blabla tarea de traductores e interior sección 1</p>
+              <p>Servicios eléctricos confiables, rápidos y seguros cerca de ti.</p>
             </div>
           </div>
 
@@ -103,7 +102,7 @@ function Home() {
             <img src={fondo2} alt="Servicio TI" />
             <div className="info">
               <h3>Servicio TI</h3>
-              <p>Lorem ipsum dolor blabla tarea de traductores e interior sección 1</p>
+              <p>Soporte técnico, mantenimiento y soluciones digitales al alcance de tu mano.</p>
             </div>
           </div>
 
@@ -111,7 +110,7 @@ function Home() {
             <img src={fondo3} alt="Mecánico" />
             <div className="info">
               <h3>Mecánico</h3>
-              <p>Lorem ipsum dolor blabla tarea de traductores e interior sección 1</p>
+              <p>Reparación de vehículos, mantenimiento y asistencia mecánica a domicilio.</p>
             </div>
           </div>
         </div>

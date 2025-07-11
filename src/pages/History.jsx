@@ -1,7 +1,10 @@
 import  { useState } from 'react';
-import '../styles/History.css';
+import { Link } from 'react-router-dom';
 import ServiceCard from '../components/serviceCard';
 import Sidebar from '../components/sidebard';
+import { FaBell, FaEnvelope } from 'react-icons/fa';
+import logo from '../assets/img/logo.png';
+import '../styles/History.css';
 
 const serviceHistory = [
   {
@@ -34,17 +37,33 @@ export default function History() {
             setCollapsed((prev) => !prev);
           };
   return (
-     <div className="dashboard-container">
-              <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} />
-        
-              <main
-                className="dashboard-main"
-                style={{
-                  marginLeft: collapsed ? '70px' : '240px',
-                  transition: 'margin-left 0.3s ease',
-                  padding: '20px',
-                }}
-              >
+     <div className="nav-container">
+      {/* 🔵 NAV */}
+      <header className="nav-header">
+        <div className="nav-logo-container">
+          <img src={logo} alt="ServiFly Logo" />
+        </div>
+
+        <div className="nav-icons-profile">
+          <FaBell className="icon-header" aria-label="Notificaciones" />
+          <Link to="/Chat">
+            <FaEnvelope className="icon-header" aria-label="Mensajes" />
+          </Link>
+          <span className="orders-text">Órdenes</span>
+        </div>
+      </header>
+
+      {/* 🔵 SIDEBAR + MAIN */}
+      <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} />
+
+      <main
+        className="dashboard-main"
+        style={{
+          marginLeft: collapsed,
+          transition: 'margin-left 0.3s ease',
+          padding: 0
+        }}
+      >
     <div className="history-container">
       <h1 className="history-title">Historial de Servicios</h1>
 

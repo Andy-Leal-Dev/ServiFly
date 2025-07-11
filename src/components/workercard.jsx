@@ -5,7 +5,7 @@ export default function WorkerCard({ name, category }) {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate('/perfil', {
+    navigate('/proPerfil', {
       state: {
         name,
         category

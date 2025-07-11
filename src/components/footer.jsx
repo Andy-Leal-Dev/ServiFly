@@ -50,6 +50,9 @@ function Footer({ bgColor = '#f2f2f2' }) {
   <p className="footer-slogan">Tu conexión directa con servicios confiables cerca de ti.</p>
   <a href="/Condiciones" class="footer-link">
   Términos y Condiciones
+  </a><br/>
+  <a href="/Politics" class="footer-link">
+  Politicas de Privacidad
   </a>
 </footer>
   );

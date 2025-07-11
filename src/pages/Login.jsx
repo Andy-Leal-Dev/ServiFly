@@ -5,7 +5,6 @@ import Footer from '../components/footer'
 import PasswordResetModal from '../components/PasswordResetModal';
 import logo from '../assets/img/logo.png';
 import logogoogle from '../assets/img/logogoogle.png';
-import logofacebook from '../assets/img/logofacebook.png';
 import Icon from '../assets/img/Icon.png';
 import '../styles/login.css';
 
@@ -122,10 +121,9 @@ const handlePasswordReset = (e) => {
                     <div className="form-checkbox">
                       <input type="checkbox" id="terms" />
                       <label htmlFor="terms">
-                        Acepto los <Link to="/Condiciones" target="_blank" style={{ color: '#004d4d'  }}>términos y servicios</Link>
-                        </label>
-                        </div>
-
+                      Acepto los <Link to="/Condiciones" target="_blank" style={{ color: '#004d4d' }}>Términos y Condiciones</Link> y la <Link to="/Politics" target="_blank" style={{ color: '#004d4d' }}>Política de Privacidad</Link>.
+                      </label>
+                      </div>
                     <button type="submit" style={{background: "#01403A" }}>Registrarse</button>
                     <div className="links">
                       <a href="#" onClick={() => setIsRegistering(false)}>¿Ya tienes una cuenta? <strong style={{color: "#01403A"}}>Inicia sesión</strong></a>
@@ -164,10 +162,7 @@ const handlePasswordReset = (e) => {
                       Continuar con Google
                     </button>
 
-                    <button className="facebook">
-                      <img src={logofacebook} alt="Facebook Logo" />
-                      Continuar con Facebook
-                    </button>
+                   
 
                     <div className="links">
                      <a href="#" onClick={(e) => { e.preventDefault(); setShowResetModal(true); }}>

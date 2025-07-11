@@ -131,45 +131,6 @@ html, body {
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
 }
 
-/* Icono de búsqueda */
-.Busquedaimg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 5px;
-  height: 5px;
-  margin-right: 10px;
-}
-
-.busqueda-icono {
-  width: 25px;
-  height: 25px;
-}
-
-/* Barra de búsqueda */
-.search-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.search-bar {
-  flex: 1;
-  width: 450px;
-  margin: 0 10px;
-  margin-right: 160px;
-  padding: 8px 12px;
-  border-radius: 40px;
-  border: 2px solid white;
-  background-color: transparent;
-  color: white;
-  outline: none;
-}
-
-.search-bar::placeholder {
-  color: white;
-  opacity: 0.7;
-}
 
 /* Menú */
 .menu {
@@ -186,12 +147,21 @@ html, body {
 }
 
 .menu .login {
-  background-color: #085454;
-  width: 150px;
-  padding: 8px 22px;
-  border-radius: 20px;
+  background-color: #01403A;
   color: white;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu .login:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
 }
 
 /* Sección de servicios */
@@ -213,12 +183,7 @@ html, body {
   margin: 0 auto 40px auto;
 }
 
-.explorar-link {
-  font-size: 1rem;
-  color: #085454;
-  text-decoration: none;
-  font-weight: 600;
-}
+
 
 /* Tarjetas */
 .cards-servicios {
@@ -268,6 +233,7 @@ html, body {
 
 .card-servicio p {
   font-size: 0.9rem;
+  color: #ffffff !important; 
 }
 
 /* Texto final */

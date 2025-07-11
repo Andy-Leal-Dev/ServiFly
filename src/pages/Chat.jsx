@@ -1,5 +1,6 @@
 // src/pages/chat.jsx
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
 import { FaSearch, FaBell, FaEnvelope } from 'react-icons/fa';
 import { BsEmojiSmile } from 'react-icons/bs';
@@ -23,7 +24,13 @@ const ChatPage = () => {
       {/* Header */}
       <header className="dashboard-header">
         <div className="logo-container">
-          <img src={logo} alt="ServiFly Logo" />
+           <Link to="/Dashboard">
+          <img
+            src={logo}
+            alt="ServiFly Logo"
+           
+          />
+          </Link>
         </div>
 
         <div className="search-bar-container">

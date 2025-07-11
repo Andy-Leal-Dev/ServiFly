@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import  { useState } from 'react';
+import { useLocation,Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaMoneyBillWave, FaClock, FaStar, FaFilter, FaSearch, FaBell, FaEnvelope } from 'react-icons/fa';
-import Sidebar from './sidebard';
+import Sidebar from '../components/sidebard';
 import logo from '../assets/img/logo.png'; // Ajusta la ruta si es diferente
-import '../styles/Dashboard.css';
 import '../styles/ProfessionalProfile.css';
 
 const reviews = [
@@ -81,7 +80,7 @@ export default function ProfessionalProfile() {
       <div className="dashboard-content">
         <Sidebar collapsed={collapsed} toggleSidebar={toggleSidebar} />
 
-        <main className="dashboard-main" style={{ marginLeft: collapsed ? '70px' : '240px' }}>
+        <main className="dashboard-main" style={{ marginLeft: collapsed }}>
           <div className="filter-bar">
             <FaFilter className="filter-icon" title="Filtrar categorías" />
             {['Electricidad', 'Software', 'Fontanería', 'Jardinería'].map((cat) => (
@@ -109,7 +108,12 @@ export default function ProfessionalProfile() {
                     <span><FaMoneyBillWave /> {payment}</span>
                     <span><FaClock /> {availability}</span>
                   </div>
+                  <Link to="/Chat" style={{ textDecoration: 'none' }}>
                   <button className="contact-button">Contactar Profesional</button>
+                  </Link>
+                  <Link to="/HiringForm" style={{ textDecoration: 'none' }}>
+                  <button className="contact-button hire-button">Contratar Profesional</button>
+                  </Link>
                 </div>
               </div>
 

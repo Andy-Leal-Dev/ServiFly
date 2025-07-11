@@ -137,11 +137,12 @@ body {
   padding: 30px 20px;
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
-  min-height: 100vh;
   transition: margin-left 0.3s ease;
   color: #333;
-  margin-left: 240px; /* ancho del sidebar abierto */
+  margin-left: 240px; /* sidebar abierto */
   overflow-y: auto;
+  height: calc(100vh - 60px); /* ajusta al alto restante después del header */
+  box-sizing: border-box;
 }
 
 .sidebar.collapsed ~ .dashboard-main {

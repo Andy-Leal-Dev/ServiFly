@@ -1,4 +1,5 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { Loader } from '@googlemaps/js-api-loader';
 import '../styles/mapView.css';
 
 export default function MapView() {
@@ -7,21 +8,39 @@ export default function MapView() {
   useEffect(() => {
     const apiKey = import.meta.env.VITE_GoogleMapsAPI;
 
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}`;
-    script.async = true;
-    script.defer = true;
-    script.onload = () => {
-      new window.google.maps.Map(mapRef.current, {
-        center: { lat: -34.6037, lng: -58.3816 },
-        zoom: 10,
-      });
-    };
+    const loader = new Loader({
+      apiKey,
+      version: 'weekly',
+    });
 
-    document.body.appendChild(script);
+    loader.load().then(() => {
+      if (!navigator.geolocation) {
+        console.error("Geolocation is not supported.");
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+
+        const map = new window.google.maps.Map(mapRef.current, {
+          center: { lat, lng },
+          zoom: 15,
+          streetViewControl: false, 
+          mapTypeControl: false,
+        });
+
+        new window.google.maps.Marker({
+          position: { lat, lng },
+          map: map,
+        });
+      }, (err) => {
+        console.error("Error getting location:", err);
+      });
+    }).catch((e) => {
+      console.error("Error loading Google Maps:", e);
+    });
   }, []);
 
-  return (
-    <div className="map-container" ref={mapRef} />
-  );
+  return <div className="map-container" ref={mapRef} />;
 }
