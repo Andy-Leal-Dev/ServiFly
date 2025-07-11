@@ -58,6 +58,7 @@ const ChatPage = () => {
             </div>
           </div>
 
+            {/* Lista de chats */}
           <ul className="chat-list">
             {[1, 2, 3].map((i) => (
               <li key={i} className="chat-list-item">

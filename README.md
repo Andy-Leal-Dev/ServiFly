@@ -1,3 +1,10 @@
+git commit -m "V 0.3.0.0
+
+- Agregada la página del chat"
+V 0.3.0.0
+
+    -Agregado la pagina del chat
+
 V 0.2.7.9
 
     -Cambios en el Dashboard
