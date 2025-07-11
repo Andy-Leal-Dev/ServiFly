@@ -1,3 +1,9 @@
+V 0.7.3.1 (
+    
+    -Arreglo de Rutas para Subir a Render
+
+)
+
 V 0.7.3.0 (
 
     -Se agrego la pagina de Politicas

@@ -7,7 +7,7 @@ import { BsEmojiSmile } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';
 import { FaCamera } from 'react-icons/fa';
 import '../styles/Dashboard.css';
-import '../styles/Chat.css';
+import '../styles/chat.css';
 
 const ChatPage = () => {
   const [message, setMessage] = useState('');
