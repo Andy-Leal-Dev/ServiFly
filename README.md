@@ -1,3 +1,8 @@
+V 0.7.3.2 (
+
+    -Hacer responsive las paginas que faltaban
+)
+
 V 0.7.3.1 (
     
     -Arreglo de Rutas para Subir a Render

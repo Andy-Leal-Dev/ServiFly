@@ -111,20 +111,23 @@ form input[type="date"] {
 }
 
 form button {
-  width: 60%;
+  width: 100%;
+  max-width: 300px;
   padding: 12px;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  display: block;
   border: none;
   border-radius: 8px;
-  background-color: #01403A;
+  background-color: #00838f; /* o #01403A si prefieres el estilo actual */
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 
 form button:hover {
-  background-color: #023530;
+  background-color: #0F1C2F;
 }
 
 form hr {
@@ -191,7 +194,7 @@ a strong {
 
 .input-icon-wrapper input {
   width: 100%;
-  padding: 0.75rem 2.5rem 0.75rem 0.75rem; 
+  padding: 0.75rem 2.5rem 0.75rem 0.75rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -203,10 +206,9 @@ a strong {
   position: absolute;
   color: #01403A !important;
   top: 50%;
-  left: 0rem;    
+  left: 0rem;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #777;
   font-size: 1.2rem;
   line-height: 1;
 }
@@ -222,15 +224,44 @@ a strong {
   }
 }
 
+/* Nuevas clases para estructura responsive */
+
+.logo-servifly {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.icon-login {
+  width: 80px;
+  margin-bottom: -1rem;
+  margin-right: 1.5rem;
+  margin-top: -0.5rem;
+}
+
+.btn-login-link {
+  background: #00838f;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 2px 0;
+  border-radius: 4px;
+}
+
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 992px) {
   .login-left h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 3rem;
   }
 
   .login-box {
-    max-width: 90%;
+    max-width: 95%;
     padding: 1.5rem;
   }
 
@@ -245,22 +276,32 @@ a strong {
 
 @media (max-width: 768px) {
   .login-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
 
-  .login-left,
-  .login-right {
-    flex: none;
-    width: 100%;
-    padding: 2rem 1rem;
+  .login-left {
+    position: static !important;
+    height: auto !important;
+    padding: 1rem !important;
+    align-items: center;
     text-align: center;
   }
 
-  .login-left h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  .logo-servifly {
+    width: 200px !important;
+    margin: 0 auto 1rem auto !important;
+  }
+
+  .login-title {
+    font-size: 1.8rem;
+    margin: 1rem auto;
     text-align: center;
+  }
+
+  .login-box {
+    max-width: 95%;
+    padding: 1.5rem;
   }
 
   form input {
@@ -268,7 +309,7 @@ a strong {
   }
 
   form button {
-    width: 80%;
+    width: 90%;
   }
 
   form hr {
@@ -277,7 +318,7 @@ a strong {
 
   .google,
   .facebook {
-    width: 90%;
+    width: 100%;
     font-size: 1rem;
   }
 
