@@ -30,7 +30,7 @@ const users = [
     roles: "Jardinero",
     rating: 4.9,
     distance: "1.2 km",
-    photo: "",
+    photo: "https://randomuser.me/api/portraits/women/9.jpg",
     online: false,
   },
 ];

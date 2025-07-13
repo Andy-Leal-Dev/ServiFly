@@ -12,7 +12,7 @@ const reviews = [
     rating: 5,
     comment: 'Excelente trabajo, muy profesional y puntual. Solucionó mi problema rápidamente.',
     timeAgo: 'Hace 2 semanas',
-    avatar: '/path/to/avatar1.jpg'
+    avatar: 'https://randomuser.me/api/portraits/women/13.jpg'
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const reviews = [
     rating: 4,
     comment: 'Buen servicio, aunque llegó un poco tarde. El trabajo final fue de calidad.',
     timeAgo: 'Hace 1 mes',
-    avatar: '/path/to/avatar2.jpg'
+    avatar: 'https://randomuser.me/api/portraits/men/2.jpg'
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const reviews = [
     rating: 5,
     comment: 'Lo mejor que he contratado. Muy detallista y limpio en su trabajo. Lo recomiendo 100%.',
     timeAgo: 'Hace 3 meses',
-    avatar: '/path/to/avatar3.jpg'
+    avatar: 'https://randomuser.me/api/portraits/women/99.jpg'
   }
 ];
 
@@ -40,7 +40,7 @@ export default function ProfessionalProfile() {
     name = 'Juan Pérez',
     category = 'Plomero, Electricista',
     rating = 4.8,
-    photo = null,
+    photo = 'https://randomuser.me/api/portraits/men/12.jpg',
     distance = '2.5 km',
     payment = 'Efectivo, Transferencia',
     availability = 'Disponible'
@@ -49,7 +49,7 @@ export default function ProfessionalProfile() {
   const [collapsed, setCollapsed] = useState(false);
   const toggleSidebar = () => setCollapsed(!collapsed);
 
-  const userPhotoUrl = '/path/to/user/photo.jpg'; // Actualiza esta ruta si es necesario
+  const userPhotoUrl = 'https://randomuser.me/api/portraits/men/13.jpg'; 
 
   return (
     <div className="dashboard-container">

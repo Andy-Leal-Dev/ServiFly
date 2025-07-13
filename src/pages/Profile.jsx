@@ -17,7 +17,7 @@ export default function Profile() {
    nombres: 'Juan Alfonzo',
    apellidos: 'Pérez Ramirez',
    email: 'juanperez@email.com',
-   telefono: '+54 11 1234 5678',
+   telefono: '+58 0424 3776349',
    nacimiento: '1997-10-12',
    });
    
@@ -74,7 +74,7 @@ export default function Profile() {
                 <p>juanperez@email.com</p>
 
                 <label>Teléfono:</label>
-                <p>+54 11 1234 5678</p>
+                <p>+58 0424 3776349</p>
 
                 <label>Fecha de Nacimiento:</label>
                 <p>12/10/1997</p>
