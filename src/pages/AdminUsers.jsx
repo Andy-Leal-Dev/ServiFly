@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate  } from 'react-router-dom';
 import UserTable from '../components/UserTable';
 import UserDetailsModal from '../components/UserDetailsModal';
 import '../styles/AdminUsers.css'; 
@@ -30,12 +31,17 @@ const mockUsers = [
 
 function AdminUsers() {
   const [selectedUser, setSelectedUser] = useState(null);
+  const navigate = useNavigate();
+
+   const handleLogout = () => {
+    navigate('/');
+  };
 
   return (
     <div className="admin-container">
       <header className="admin-header">
         <h2>Panel de Usuarios</h2>
-        <button className="btn-logout">Cerrar Sesión</button>
+        <button className="btn-logout" onClick={handleLogout}> Cerrar Sesión</button>
       </header>
 
       <div className="filter-bar">

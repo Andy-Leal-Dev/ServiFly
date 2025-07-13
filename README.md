@@ -1,3 +1,9 @@
+V 1.0.8.6 (
+
+    -Se Arreglo el boton de cerrar sesión de la vista de Admin
+   
+)
+
 V 1.0.8.5 (
 
     -Se agrego la vista de admin con su respectivo css
