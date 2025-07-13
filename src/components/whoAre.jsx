@@ -23,17 +23,17 @@ const miembros = [
 export default function WhoAre() {
   const visibleCount = 3;
 
-  // startIndex actual que se muestra
+
   const [startIndex, setStartIndex] = useState(0);
-  // dirección de animación: 'left' o 'right'
+
   const [direction, setDirection] = useState('right');
-  // controla si estamos en animación de salida
+
   const [isExiting, setIsExiting] = useState(false);
-  // índice que mostrará el siguiente grupo tras animación de salida
+
   const [nextIndex, setNextIndex] = useState(null);
 
   const handleChange = (newDirection, newIndex) => {
-    if (isExiting) return; // no permitir cambio durante animación de salida
+    if (isExiting) return; 
     setDirection(newDirection);
     setIsExiting(true);
     setNextIndex(newIndex);
@@ -53,18 +53,18 @@ export default function WhoAre() {
     );
   };
 
-  // Cuando termina la animación de salida, cambiamos el contenido y quitamos animación de salida
+
   useEffect(() => {
     if (!isExiting) return;
     const timeout = setTimeout(() => {
       setStartIndex(nextIndex);
       setIsExiting(false);
       setNextIndex(null);
-    }, 1200); // duración de animación en ms (igual que el CSS)
+    }, 1200); 
     return () => clearTimeout(timeout);
   }, [isExiting, nextIndex]);
 
-  // Autoplay cada 5s
+
   useEffect(() => {
     const interval = setInterval(() => {
       siguiente();
@@ -72,14 +72,13 @@ export default function WhoAre() {
     return () => clearInterval(interval);
   }, [startIndex]);
 
-  // Miembros a mostrar (según startIndex)
   const visibleMiembros = [];
   for (let i = 0; i < visibleCount; i++) {
     const idx = (startIndex + i) % miembros.length;
     visibleMiembros.push(miembros[idx]);
   }
 
-  // Clases de animación: si está saliendo, usar clase de salida según dirección, si no, clase de entrada
+
   const slideClass = isExiting
     ? direction === 'left'
       ? 'slide-out-left'

@@ -1,10 +1,9 @@
-// src/components/UserDetailsModal.jsx
 import '../styles/UserDetailsModal.css';
 
 function UserDetailsModal({ user, onClose }) {
   const handleBlockUser = () => {
     alert(`Usuario ${user.nombre} bloqueado`);
-    onClose(); // cerrar modal después de bloquear
+    onClose(); 
   };
 
   return (

@@ -9,7 +9,7 @@ export function LocationProvider({ children }) {
     return localStorage.getItem('locationRequested') !== 'true';
   });
   const [locationError, setLocationError] = useState(null);
-  const [locationReady, setLocationReady] = useState(false); // ✅ ESTA ES LA LÍNEA CLAVE
+  const [locationReady, setLocationReady] = useState(false); 
 
   const addresses = [
     { title: 'Casa', details: 'Av. Siempre Viva 742' },
@@ -23,7 +23,7 @@ export function LocationProvider({ children }) {
       const errorMsg = "Tu navegador no soporta geolocalización.";
       console.error(errorMsg);
       setLocationError(errorMsg);
-      setLocationReady(true); // ✅ importante
+      setLocationReady(true); 
       return;
     }
 

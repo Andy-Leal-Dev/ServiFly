@@ -1,4 +1,3 @@
-import React from 'react';
 import facebookIcon from '../assets/img/logofacebook.png'; 
 import xIcon from '../assets/img/logotwitterx.png';
 import tiktokIcon from '../assets/img/logotiktok.png';

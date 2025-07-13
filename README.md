@@ -1,201 +1,244 @@
-V 1.0.8.6 (
+# Frontend - ServiFly
+
+[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-4+-yellow.svg)](https://vitejs.dev/)
+[![CSS](https://img.shields.io/badge/CSS-Puro-blueviolet.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+## Descripción del Proyecto
+
+Este es el **frontend de ServiFly**, una plataforma que conecta clientes con profesionales de diversos oficios. La aplicación web está construida con React y utiliza una arquitectura moderna y optimizada para el rendimiento gracias a Vite y estilos con CSS puro.
+
+El frontend  permite:
+
+- Registro e inicio de sesión de usuarios
+- Navegación y búsqueda de servicios
+- Gestión de perfiles y direcciones
+- Reseñas y valoraciones
+- Panel de administración
+
+---
+
+## 🧾 Estructura del Proyecto
+```
+ServiFly/
+├── public/ # Archivos públicos
+├── src/
+│ ├── assets/ # Imágenes y recursos estáticos
+│     └──img/ # Imágenes generales (Logos, etc.)
+│     └──Members/ # Imágenes de los Miembros (Logos, etc.)
+│ ├── components/ # Componentes reutilizables
+│     └──AddresMap.jsx/ # Mapa para colocar las direcciones
+│     └──footer.jsx/ # El footer de las paginas (Redes, derechos, politicas)
+│     └──AddresMap.jsx/ # Mapa para colocar las direcciones
+│     └──institucional.jsx/ # Visión, Misión y Objetivos
+│     └──LocationLoading.jsx/ # Spinner de carga para obtener la ubicación
+│     └──mapView.jsx/ # Mapa principal para mostrar los profesionales cercanos
+│     └──PasswordResetModal.jsx/ # Modal para la recuperación de contraseñas
+│     └──ReviewCard.jsx/ # Card para reseñas de profesionales
+│     └──serviceCard.jsx/ # Card para ofertado de servicios
+│     └──sidebard.jsx/ # Barra lateral para redirecciones
+│     └──UserDetailsModal.jsx/ # Detalles de usuario con opción a Bloquear, en vista Admin
+│     └──UserTable.jsx/ # Detalles de usuario en forma de tabla, para la vista Admin
+│     └──whoAre.jsx/ # Carrusel de las imagenes de los miembros
+│     └──workercard.jsx/ # Card para ofertado de profesionales
+│ ├── contexts/ # Contextos globales
+│     └──LocationContext.jsx/ # Obtiene el permiso de la ubicación y lo exporta a componentes de mapa
+│ ├── pages/ # Vistas principales
+│     └──AdminUser.jsx/ # Vista de Admin
+│     └──Chat.jsx/ # Vista para el chat 
+│     └──Condiciones.jsx/ # Vista de condiciones de uso
+│     └──Dashboard.jsx/ # Vista principal para el uso de la plataforma
+│     └──Direcciones.jsx/ # Vista para guardar y mostrar las direcciones del usuario
+│     └──Favoritos.jsx/ # Vista para guardar los profesionales favoritos
+│     └──HiringForm.jsx/ # Vista para contratar un profesional
+│     └──History.jsx/ # Vista para mostrar el historial de profesionales
+│     └──home.jsx/ # Vista principal
+│     └──Login.jsx/ # Vista de login y registro
+│     └──Politics.jsx/ # Vista de Politicas de uso
+│     └──ProfessionalProfile.jsx/ # Vista para observar reseñas y calificación de un profesional
+│     └──Profile.jsx/ # Vista para ver los datos de usuario y editarlos
+│     └──ReviewsPage.jsx/ # Vista del profesional para ver sus reseñas
+│ ├── router/ # Configuración de rutas (React Router)
+│     └──AppRoutes.jsx/ # Manejo de las rutas
+│ ├── styles/ # Estilos CSS globales y por componente
+│     └──AdminUsers.css/ # Estilos de AdminUsers
+│     └──App.css/ # Estilos de App
+│     └──chat.css/ # Estilos del Chat
+│     └──Condiciones.css/ # Estilos de Condiciones
+│     └──Dashboard.css/ # Estilos de Dashboard
+│     └──Direcciones.css/ # Estilos de Direcciones
+│     └──Favoritos.css/ # Estilos de Favoritos
+│     └──footer.css/ # Estilos de Footer
+│     └──HiringForm.css/ # Estilos de HiringForm
+│     └──History.css/ # Estilos de History
+│     └──home.css/ # Estilos del Home
+│     └──index.css/ # Estilos del Index
+│     └──LocationLoading.css/ # Estilos de LocationLoading
+│     └──login.css/ # Estilos del Login
+│     └──mapView.css/ # Estilos del MapView
+│     └──PasswordResetModal.css/ # Estilos del PasswordResetModal
+│     └──ProfessionalProfile.css/ # Estilos del ProfessionalProfile
+│     └──Profile.css/ # Estilos del Profile
+│     └──Reviews.css/ # Estilos de Reviews
+│     └──ServiceCard.css/ # Estilos de ServiceCard
+│     └──sidebard.css/ # Estilos de la Sidebard
+│     └──UserDetailsModal.css/ # Estilos de UserDetailsModal
+│     └──UserTable.css/ # Estilos de UserTable
+│     └──whoAre.css/ # Estilos del WhoAre
+│     └──workercard.css/ # Estilos de la WorkerCard
+│ ├── utils/ # archivos de utilidad (Carga de imágenes)
+│     └──memberImages.css/ # Carga de las imágenes de los miembros y las exporta a diversos componentes
+│ ├── App.jsx # Punto de entrada React
+│ └── main.jsx # Inicialización del proyecto
+├── .env # Variables de entorno
+├── index.html # HTML base
+├── package.json
+├── vite.config.js
+└── README.md
+
+```
+---
+
+## 🚀 Tecnologías Utilizadas
 
-    -Se Arreglo el boton de cerrar sesión de la vista de Admin
-   
-)
+| Tecnología     | Descripción                                                  |
+|----------------|--------------------------------------------------------------|
+| **React.js 19**   | Librería principal para construir la UI                      |
+| **Vite**       | Bundler rápido y moderno para proyectos React                |
+| **CSS puro**   | Estilos personalizados sin frameworks externos               |
+| **React Router DOOM V7** | Navegación entre rutas protegidas y públicas               |
+| **React Icons** | Iconografía               |
+| **Google Maps JS API** | Visualización de mapas y geolocalización             |
 
-V 1.0.8.5 (
+---
 
-    -Se agrego la vista de admin con su respectivo css
-    -Se agrego componente de UserDetails
-    -Se agrego componente de UserTable
-    -Se agrego componente de LocationLoading
-    -Modificaciones en varios css
-    -Modificaciones en Routes
-    -Modificaciones en DashBoard y sideBard
-   
-)
 
-V 0.9.5.5 (
+## ⚙️ Instalación
 
-    -Modificaciones de Css generales
-    -Modificaciones de rutas
-    -Modificaciones para obtener la dirección
-    -Modificaciones en paginas 
-    -Modificación en componentes
-    -Se añadio otra carpeta de context
-    -Se añadio un archivo Location context para obtener la dirección y pasarla a los mapas
-    -Se añadio la vista de Direcciones
-    -Se añadio el componente de addresMap
-)
+### Requisitos Previos
 
-V 0.7.3.2 (
+- Node.js (v18 o superior)
+- npm (v9 o superior)
 
-    -Hacer responsive las paginas que faltaban
-)
+1. Clonar el repositorio:
 
-V 0.7.3.1 (
-    
-    -Arreglo de Rutas para Subir a Render
+```bash
+git clone https://github.com/Andy-Leal-Dev/ServiFly.git
+cd ServiFly
+```
+2. Instalar Dependencias:
 
-)
+```bash
+npm install
+```
+## Ejecutar el servidor
 
-V 0.7.3.0 (
+### Ejecutar de manera local
 
-    -Se agrego la pagina de Politicas
-    -Se agrego Pagina de Review
-    -Se agrego Pagina de Favoritos
-    -Se agrego Pagina de Contacto a Profesionales
-    -Se agrego el componente ReviewCard
-    -Modificaciones generales en varios componentes (Estructura)
-    -Modificaciones generales en varios estilos
-    -Modificaciones en Vistas
+Para iniciar el servidor: 
 
-)
+```bash
+npm run dev
+```
+Por defecto, corre en http://localhost:5173
 
-V 0.3.1.1 (
+## Configuración del Entorno (.env)
 
-    -Agregado el perfil profesional en el dashboard
-    -le quite el apartado de softeware al sidebard
-)
+ -VITE_GoogleMapsAPI=Tu_key_de_la_Api
 
-V 0.3.0.0 (
 
-    -Agregado la pagina del chat
-)
+ ### Ejecutar de manera online (Render)
 
-V 0.2.7.9 (
+Para iniciar el servidor: 
 
-    -Cambios en el Dashboard
-    -Mejorado un poco el Diseño del Dashboard
-    -Quite el apartado de SoftwareCard
-)
+```bash
+npm install && npm run build
+```
+Publish directory
 
-V 0.2.7.8 (
-    
-    -Error en un archivo css, genero incompatibilidad en el servidor 
-    
-)
+```bash
+dist
+```
+Redirect and Rewrite Rules
 
-V 0.2.7.7 (
+| Source | Destination | Action |
+| :------| :-------| :-----------| 
+| `/*` | `/index.html` | Rewrite | 
 
-    -Se modifico una letra que generaba un error al subir al servidor "workerCard" la c
-    
-)
 
-V 0.2.7.6 (
+## Configuración del Entorno (.env)
 
-    -Se modifico una letra que generaba un error al subir al servidor "workerCard"
-    
-)
+ -VITE_GoogleMapsAPI=Tu_key_de_la_Api
 
-V 0.2.7.5 (
+El link es: https://servifly.onrender.com/
 
-    -Se modifico una letra que generaba un error al subir al servidor "mapView"
-    
-)
-V 0.2.7.4 (
+## Vistas Principales
 
-    -Se agrego una nueva dependencia para iconos react-icons
+### `Home.jsx`
+Al ingresar a ServiFly, los usuarios son recibidos por la vista
+principal de la plataforma, diseñada para ofrecer una
+navegación clara e intuitiva. Esta pantalla incluye las
+siguientes secciones clave:
 
-    -Usando la dependencia de iconos se agregaron iconos a los formularios de inicio de sesión y registro
+- Inicio: Presenta una visión general de la plataforma y sus principales beneficios, invitando al usuario a conocer cómo funciona ServiFly.
+- Nosotros: Brinda información sobre la misión, visión y propósito de la plataforma, destacando el valor que ofrece a usuarios y profesionales.
+- Regístrate: Botón destinado a nuevos usuarios y profesionales que deseen crear una cuenta para comenzar a usar los servicios.
+- Iniciar Sesión: Permite el acceso a usuarios ya registrados, tanto clientes como profesionales, para gestionar sus servicios o perfiles.
 
-    -Se agrego el componente mapView que maneja la carga de la api del mapa, al igual que se agrego sus estilos propios con un archivo css
+### `Login.jsx`
+Al hacer click en algunos de los Botones, "Registrarse o Iniciar Sesión", el usuario será redirigido a el la vista del login donde le permitira su registro o su inicio de sesión en los siguientes campos:
 
-    -Se agrego la estructura principal del dashboard
+#### Registro
+- Nombres
+- Apellidos
+- Correo Electronico
+- Telefono
+- Fecha de Nacimiento
+- Contraseña y confimar contreseña
+- Terminos y condiciones más Politicas de privacidad
+#### Inicio de sesión
+- Correo
+- Contraseña
 
-    -Se agregaron los componentes de serviceCard,softwareCard y workercard con sus respectivos archivos de css, cada uno de esos componentes genera una carta de presentación en el dashboard
+### `Dashboard.jsx`
+Permite encontrar profesionales cercanos, buscarlos, filtrarlos y acceder a diversas vistas mediante la barra lateral
 
-    -Se agrego el componente de sidebard con su archivo css que se encarga de renderizar una barra lateral desplegable
+### `ProfessionalProfile.jsx`
+Nos muestra la información del profesional que queremos contratar, como reseñas y calificicaciones del mismo
 
-    -Se agregaron y renderizaron las vistas de Profile e History, que se acceden mediando la barra lateral del dashboard
+### `chat.jsx`
+Al contactar con el profesional, tendremos un chat para comunicarnos con el
 
-    -Se agrego un modal mediante un componente PasswordResetModal para la parte de "haz olvidado tu contraseña", aun falta una parte
+### `HiringForm.jsx`
+Formulario para contratar al profesional, ingresando horas disponibles y ubicaciones registradas
 
-)
+### `Direcciones.jsx`
+Permite registrar y guardar direcciones 
 
-V 0.1.6.3 (
+### `Profile.jsx`
+Nos permite observar y editar nuestra información como usuarios
 
-    -Modificacion de estilos en la parte de Home
+### `Condiciones.jsx`
+Muestra las condiciones para el uso de ServiFly
 
-    -Se agrego animaciones para la parte de beneficios
+### `Politics.jsx`
+Muestra las politicas de seguridad para el uso de Servifly
 
-    -Se Cambio el estilo de la Mision y Vision, se agrego otro de Objetivos y Se elimino los de los valores
 
-    -Se Cambio la img Ilustracion.png por otra y se movio a la parte de abajo
+## Rutas `AppRoutes.jsx`
 
-    -Junto a esa Ilustracion se elimino el mensaje que tenia y se le agrego un formulario de contacto
-
-    -Se quitaron el apartado de los botones de "conoce al equipo" y se agrego un carrusel de fotos con las fotos de los integrantes
-
-    -Se cambio la foto de uno de los estudiantes
-)
-
-V 0.1.5.2 (
-
-    -Se quito la barra de navegación del Home
-
-    -Se arreglo el error de fotos invetidas
-
-    -Se arreglaron pequeños errores al mostrar los nombre e imagenes de los miembros
-
-    -Se agregaron los terminos y condiciones, agregandole algunos estilos
-)
-
-V 0.1.4.1 (
-
-    -Se agrego la carpeta utils, otra vez, por alguna razón se elimino
-
-    -Se agrego un static.json para probar el deploy en render y que funcione las subrutas
-
-    -Se agrego una carpeta members que esta llena de imagenes de los participantes
-
-    -Se agrego un archivo en utils, llamado memberImages.js que cumple la función de importar todas las imagenes de los miembros y luego ser llamado en whoAre.jsx
-)
-
-V 0.1.3.1 (
-
-    -Se agrego la carpeta components
-
-    -Se agregaron los componenentes, footer, institucional, y whoAre
-
-    -Se agrego la vista de Condiciones con su respectiva ruta
-
-    -Se construyo el footer con las respectiva redes
-
-    -Se modificaron inputs en el registro, se elimino el input cedula y se agrego el de contraseña y repetir
-    contraseña
-
-    -Algunos cambios minimos de css en Index.css, se agrego un color white en el fondo general
-)
-
-V 0.0.2.0 (
-
-    - Se Agrego la carpeta utils
-
-    - Se hiciero n modificaciones del css en App
-
-    - Modificaciones de css en la Nav
-
-    - Modificaciones de css en el Login
-
-    - Modificaciones estructurales del Login
-    
-    - Se implemento un formulario de registro en la misma vista del Login
-
-)
-
-
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Ruta | Vista | Descripcion |
+| :------| :-------| :-----------| 
+| `/`    | `home.jsx` |Pagina principal | 
+| `/login` | `Login.jsx` | Pagina del Login y Registro | 
+| `/Condiciones` | `Condiciones.jsx` | Pagina de Condiciones de Uso | 
+| `/Dashboard` | `Dashboard.jsx` | Pagina principal de funcionalidades | 
+| `/Profile` | `Profile.jsx` | Pagina de información del usuario| 
+| `/History` | `History.jsx` | Pagina de historial de profesionales contratados| 
+| `/Chat`    | `Chat.jsx` |Pagina de chat con el profesional | 
+| `/Review` | `ReviewsPage.jsx` | Pagina de reseñas que tiene el profesional| 
+| `/Favoritos` | `Favoritos.jsx` | Pagina de profesionales favoritos | 
+| `/Politics` | `Politics.jsx` | Pagina de Politicas de uso | 
+| `/HiringForm` | `HiringForm.jsx` | Pagina de formulario para contratar un profesional| 
+| `/Direcciones` | `Direcciones.jsx` | Pagina para ver y agregar direcciones como usuario| 
+| `/Admin` | `AdminUsers.jsx` | Pagina de administración| 

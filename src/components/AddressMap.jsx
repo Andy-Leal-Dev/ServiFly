@@ -4,7 +4,7 @@ import '../styles/mapView.css';
 
 export default function AddressMap({ userLocation, addresses = [], onMapClick }) {
   const mapRef = useRef(null);
-  const mapInstance = useRef(null); // guardamos la instancia para evitar recrearla
+  const mapInstance = useRef(null); 
 
   useEffect(() => {
     if (!userLocation) return;
@@ -26,7 +26,6 @@ export default function AddressMap({ userLocation, addresses = [], onMapClick })
 
       mapInstance.current = map;
 
-      // Marcador azul para la ubicación actual
       new window.google.maps.Marker({
         position: userLocation,
         map,
@@ -38,7 +37,6 @@ export default function AddressMap({ userLocation, addresses = [], onMapClick })
 
       const geocoder = new window.google.maps.Geocoder();
 
-      // Agregar direcciones existentes
       addresses.forEach(({ title, details }) => {
         geocoder.geocode({ address: details }, (results, status) => {
           if (status === 'OK' && results[0]) {
@@ -51,7 +49,6 @@ export default function AddressMap({ userLocation, addresses = [], onMapClick })
         });
       });
 
-      // ✅ Click para agregar nueva dirección
       map.addListener("click", (e) => {
         const clickedLatLng = e.latLng;
 
@@ -62,7 +59,6 @@ export default function AddressMap({ userLocation, addresses = [], onMapClick })
               onMapClick({ lat: clickedLatLng.lat(), lng: clickedLatLng.lng() }, address);
             }
 
-            // Marcar la ubicación clickeada
             new window.google.maps.Marker({
               position: clickedLatLng,
               map,

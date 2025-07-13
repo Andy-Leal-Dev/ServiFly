@@ -1,4 +1,3 @@
-// src/pages/chat.jsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
@@ -12,7 +11,7 @@ import '../styles/chat.css';
 const ChatPage = () => {
   const [message, setMessage] = useState('');
 
-  const userPhotoUrl = 'https://i.pravatar.cc/150?img=3'; // Puedes reemplazarlo por una foto real
+  const userPhotoUrl = 'https://i.pravatar.cc/150?img=3'; 
 
   const handleSend = () => {
     console.log('Mensaje enviado:', message);

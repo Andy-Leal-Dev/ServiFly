@@ -21,7 +21,7 @@ export default function HiringForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Formulario enviado:', formData);
-    // Aquí podrías enviar los datos a una API
+
   };
 
   return (
