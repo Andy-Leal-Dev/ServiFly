@@ -17,8 +17,8 @@ export default function Direcciones() {
   setShowAddModal(true);
   };
   const [addresses, setAddresses] = useState([
-    { id: 1, title: 'Casa', details: 'Av. Santa Fe 1234, Buenos Aires, Argentina' },
-    { id: 2, title: 'Oficina', details: 'Av. Corrientes 500, Buenos Aires, Argentina' },
+    { id: 1, title: 'Casa', details: 'López Contreras San Juan de Los Morros 2301, Guárico' },
+    { id: 2, title: 'Oficina', details: 'C. Rivas Dávila, San Juan de Los Morros 2301, Guárico' },
   ]);
 
   const [deleteId, setDeleteId] = useState(null);
