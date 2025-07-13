@@ -19,7 +19,7 @@ export default function Sidebar({ collapsed, toggleSidebar }) {
             <li><Link to="/Review">Reseñas</Link></li>
             <li><Link to="/Condiciones" target="_blank">Condiciones</Link></li>
             <li><Link to="/Politics" target="_blank">Politicas</Link></li>
-            <li><Link to="/"> Salir</Link></li>
+            <li><Link to="/"> Cerrar Sesión</Link></li>
           </ul>
         </>
       )}

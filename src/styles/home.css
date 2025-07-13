@@ -602,6 +602,71 @@ html, body {
   transform: scale(1.05);
 }
 
+.location-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.location-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  font-family: 'Montserrat', sans-serif;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+.location-button {
+  margin-top: 1rem;
+  padding: 12px 28px;
+  background-color: #004d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.location-button:hover {
+  background-color: #007777;
+  transform: scale(1.05);
+}
+
+.location-retry-button {
+  margin-top: 1rem;
+  padding: 12px 28px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.location-retry-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.location-error-text {
+  color: #cc0000;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .beneficios-main {

@@ -1,0 +1,111 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #01403A;
+}
+
+.modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.modal li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+/* Botón Cerrar */
+.btn-close {
+  background-color: #bbb;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+  background-color: #999;
+}
+
+/* Botón Bloquear */
+.btn-block {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(192, 57, 43, 0.4);
+}
+
+.btn-block:hover {
+  background-color: #992d22;
+  box-shadow: 0 6px 12px rgba(153, 45, 34, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+
+  .modal {
+    padding: 1rem;
+    width: 95%;
+    max-width: 95%;
+  }
+
+  .modal h3 {
+    font-size: 1.3rem;
+  }
+
+  .modal li {
+    font-size: 0.9rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .btn-close, .btn-block {
+    width: 100%;
+    padding: 12px 0;
+    font-size:1rem;
+  }
+}

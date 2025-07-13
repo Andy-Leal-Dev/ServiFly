@@ -1,3 +1,15 @@
+V 1.0.8.5 (
+
+    -Se agrego la vista de admin con su respectivo css
+    -Se agrego componente de UserDetails
+    -Se agrego componente de UserTable
+    -Se agrego componente de LocationLoading
+    -Modificaciones en varios css
+    -Modificaciones en Routes
+    -Modificaciones en DashBoard y sideBard
+   
+)
+
 V 0.9.5.5 (
 
     -Modificaciones de Css generales

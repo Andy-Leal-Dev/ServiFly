@@ -4,6 +4,7 @@ import Sidebar from '../components/sidebard';
 import MapView from '../components/mapView';
 import WorkerCard from '../components/workercard';
 import ServiceCard from '../components/serviceCard';
+import LocationLoading from '../components/LocationLoading';
 import { LocationContext } from '../context/LocationContext';
 import logo from '../assets/img/logo.png';
 import { FaSearch, FaBell, FaEnvelope, FaFilter } from 'react-icons/fa';
@@ -12,9 +13,19 @@ import '../styles/Dashboard.css';
 export default function Dashboard() {
   const [collapsed, setCollapsed] = useState(false);
   const toggleSidebar = () => setCollapsed((prev) => !prev);
-  const { userLocation } = useContext(LocationContext);
-   if (!userLocation) {
-    return <p>Cargando ubicación...</p>;
+  const { userLocation, showLocationPrompt, locationError, requestLocation } = useContext(LocationContext);
+
+  if (showLocationPrompt) {
+   return <LocationLoading message="Esperando que permitas el acceso a tu ubicación..." />;
+  }
+
+  if (!userLocation) {
+  return (
+    <LocationLoading 
+      message={locationError || "No se pudo obtener tu ubicación. Verifica los permisos."}
+      onRetry={requestLocation}
+    />
+  );
   }
 
   const history = [

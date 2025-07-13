@@ -12,6 +12,7 @@ import Favoritos from '../pages/Favoritos'
 import Politics  from '../pages/Politics';
 import HiringForm from '../pages/HiringForm';
 import Direcciones from '../pages/Direcciones';
+import AdminUsers from '../pages/AdminUsers';
 
 export default function AppRoutes() {
   return (
@@ -29,6 +30,7 @@ export default function AppRoutes() {
       <Route path='/Politics' element={<Politics/>}/>
       <Route path='/HiringForm' element={<HiringForm />}/>
       <Route path='/Direcciones' element={<Direcciones />}/>
+      <Route path='/Admin' element={<AdminUsers/>}/>
     </Routes>
   );
 }

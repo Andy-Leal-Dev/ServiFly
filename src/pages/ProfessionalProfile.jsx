@@ -155,7 +155,6 @@ export default function ProfessionalProfile() {
                 ))}
                 <div className="view-all-reviews">
                   <a href="#" className="view-all">Ver todas las reseñas</a>
-                  <button>Regresar</button>
                 </div>
               </div>
             </div>
